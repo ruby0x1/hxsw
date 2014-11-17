@@ -23,7 +23,7 @@ This is a haxe port of "[OpenGL Shader Wrangler](http://prideout.net/blog/?p=11)
 - `cd tests/`
 - `haxe build.hxml`
 
-This will generate a `run.n` file, and run `neko run.n` which will run the binary. There is a prebuilt version included. If installed through haxelib, `haxelib run hxsw` will print the example as well.
+This will generate a `run.n` file, and run `neko run.n` which will run the binary. There is a prebuilt version included. 
 
 ##to use the code
 

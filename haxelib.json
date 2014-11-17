@@ -1,0 +1,11 @@
+{
+    "name": "hxsw",
+    "url": "https://github.com/underscorediscovery/hxsw",
+    "license": "MIT",
+    "tags": ["shaders", "preprocessor", "parser"],
+    "description": "Haxe Shader Wrangler, a port of OpenGL Shader Wrangler for haxe. Not specific to GL.",
+    "version": "1.0.0",
+    "releasenote": "Initial release. see Readme.md for full details",
+    "contributors": [ "underscorediscovery" ],
+    "dependencies": {}
+}
