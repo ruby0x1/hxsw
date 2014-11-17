@@ -88,7 +88,7 @@ In the above example, I placed the shader stage in the second token and the API 
 
 ##simple example
 
-```
+```glsl
 
 -- Vertex
 
@@ -127,7 +127,7 @@ If a section divider does declare a legal shader key (i.e., the first contiguous
 
 For example, the following is a silly but valid effect file:
 
-```
+```glsl
 ______  _  _  _   
 | ___ \| |(_)| |  
 | |_/ /| | _ | |_ 
@@ -239,7 +239,7 @@ This is the only function we haven’t explained yet:
 `add_directive(token:String, directive:String);`  
 This tells HXSW to add a token-to-directive mapping. Whenever it sees a shader key that contains the specified token, it prepends the specified directive to the top of the shader. If the specified token is an empty string, then the specified directive is prepended to all shaders. For example, given this user code:
 
-```
+```glsl
 
 sw.add_directive("", "#define FOO 1");
 sw.add_directive("GL32", "#version 140");
@@ -258,7 +258,7 @@ trace(sw.get(effectKey) + '\n');
 You’d get output like this:
 
 
-```
+```glsl
 	Blit.ES2.iPhone.Fragment:
 	#define FOO 1
 	#extension GL_OES_standard_derivatives : enable
