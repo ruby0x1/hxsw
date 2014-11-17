@@ -280,8 +280,8 @@ You can also use an effect name for the token parameter in `add_directive`, whic
 
 This only makes sense if you have [seen the code](tests/Main.hx)   
 
-####[With Logging](tests/output_with_logging.md)
-####[Without Logging](tests/output_without_logging.md)
+####[With Logging](tests/output_with_logging.txt)
+####[Without Logging](tests/output_without_logging.txt)
 
 &nbsp;
 
