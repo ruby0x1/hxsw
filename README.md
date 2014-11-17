@@ -1,8 +1,10 @@
 Haxe Shader Wrangler
 ====
 
-This is a haxe port of "[OpenGL Shader Wrangler](http://prideout.net/blog/?p=11)" by Philip Rideout
+This is a haxe port of "[OpenGL Shader Wrangler](http://prideout.net/blog/?p=11)" by Philip Rideout. 
+This library is part of the [snõwkit](http://snowkit.org) collective.
 
+![hxsw](hxsw.png)
 
 ##facts
 
