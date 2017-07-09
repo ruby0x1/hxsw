@@ -6,7 +6,7 @@ This library is part of the [snõwkit](http://snowkit.org) collective.
 
 ![hxsw](hxsw.png)
 
-##facts
+## Facts
 
 - This is a string manipulator
 - No dependency on OpenGL
@@ -19,7 +19,7 @@ This library is part of the [snõwkit](http://snowkit.org) collective.
 - Test code includes example usage in full
 
 
-##to run the test
+## To run the test
 
 - Install [Haxe](http://haxe.org)
 - `cd tests/`
@@ -27,7 +27,7 @@ This library is part of the [snõwkit](http://snowkit.org) collective.
 
 This will generate a `run.n` file, and run `neko run.n` which will run the binary. There is a prebuilt version included. 
 
-##to use the code
+## To use the code
 
 - copy `hxsw/` to your project
 
@@ -37,18 +37,18 @@ OR
 - use `haxelib git hxsw https://github.com/underscorediscovery/hxsw.git`
 - then add -lib to your hxml, or as a dependency in your IDE/project
 
-##license
+## License
 
 MIT (see LICENSE.md)    
 It's preferable the HXSW.hx file maintains it's licensing info at the top as well.
 
-##versions
+## Versions
 
 - 1.0.0 - Initial implementation
 
-##about
+## About
 
-####The following below is taken from the original [blog post](http://prideout.net/blog/?p=11):
+#### The following below is taken from the original [blog post](http://prideout.net/blog/?p=11):
 
 To recap, you’d like to avoid creating a separate file for every friggin’ shader in your OpenGL program, especially with the advent of purely shader-based OpenGL and the new programmable stages in OpenGL 4.0. You’d also like to avoid big frameworks that attempt to accommodate other API’s like DirectX.
 
@@ -59,7 +59,7 @@ So, you need a lightweight solution that can organize your shader strings, load 
 - Optionally prepends shader directives like #version and #extension
 - Associates each shader with a quasi-hierarchical path called a shader key
 
-#####vocabulary 
+##### Vocabulary 
 
 Here’s an example effect key with four tokens:
 
@@ -88,7 +88,7 @@ Any line of GLSL code that starts with a pound (#) symbol.
 
 In the above example, I placed the shader stage in the second token and the API version in the third token. You aren’t required to arrange your shader keys in this way. The only requirement is that the first token corresponds to the effect file. You don’t need to use the GL3 notation for your version tokens either; in fact, you don’t have to include a version token at all. The onus is on you to create a consistent hierarchy and naming convention.
 
-##simple example
+## Simple example
 
 ```glsl
 
@@ -121,7 +121,7 @@ var fs = sw.get('Blit.Fragment');
 
 HXSW handles everything except file reading; you do that with load_effect. HXSW then takes the first token from the effect key that you pass to `get`, then checks if it has the effect cached; if not, it finds a file by decorating the effect name with a path prefix (in this case, the default, `./`) and a path suffix (in this case, the default, `.glsl`).
 
-##Ignored Text
+## Ignored Text
 
 If a section divider in your effect file does not contain any alphanumeric characters, then all text is ignored until the next section divider (or the end of the file). Also, any text that precedes the first section divider is ignored (this could be useful for a copyright notice).
 
@@ -160,7 +160,7 @@ void main() {
 
 ```
 
-##Error Handling and Shader Key Matching
+## Error Handling and Shader Key Matching
 HXSW never aborts or throws exceptions. It returns 0 on failure and lets you fetch the most recent error string using `sw.error`, where sw is an instance. This can happen if it can’t find the file for your specified effect key, etc. The following are error states:
 
 Errors are encountered under the following conditions, each will also give additional information where possible:
@@ -235,7 +235,7 @@ Note that the first requested effect key did not report an error even though tha
 
 HXSW will simply return the longest key that matches with the beginning of the requestion key. This avoids complicating the file format with support for cross-referencing.
 
-##Directive Mapping
+## Directive Mapping
 This is the only function we haven’t explained yet:
 
 `add_directive(token:String, directive:String);`  
@@ -278,12 +278,12 @@ You’d get output like this:
 You can also use an effect name for the token parameter in `add_directive`, which tells HXSW to prepend the specified directive to all shaders in that effect.
 
 
-##example output
+## Example output
 
 This only makes sense if you have [seen the code](tests/Main.hx)   
 
-####[With Logging](tests/output_with_logging.txt)
-####[Without Logging](tests/output_without_logging.txt)
+#### [With Logging](tests/output_with_logging.txt)
+#### [Without Logging](tests/output_without_logging.txt)
 
 &nbsp;
 
